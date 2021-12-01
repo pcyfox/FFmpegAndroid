@@ -9,6 +9,7 @@ import com.frank.ffmpeg.util.ThreadPoolUtil;
 import java.lang.annotation.Documented;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
+import java.util.Arrays;
 import java.util.List;
 
 import androidx.annotation.IntDef;
@@ -42,61 +43,63 @@ public class FFmpegCmd {
     @Documented
     @Retention(RetentionPolicy.SOURCE)
     @IntDef({STATE_INIT, STATE_RUNNING, STATE_FINISH, STATE_ERROR})
-    public @interface FFmpegState {}
+    public @interface FFmpegState {
+    }
 
     /**
      * Execute FFmpeg command
-     * @param commands the String array of command
+     *
+     * @param commands         the String array of command
      * @param onHandleListener the callback for executing command
      */
     public static void execute(final String[] commands, final OnHandleListener onHandleListener) {
-        mProgressListener = onHandleListener;
-        ThreadPoolUtil.INSTANCE.executeSingleThreadPool(new Runnable() {
-            @Override
-            public void run() {
-                if (onHandleListener != null) {
-                    onHandleListener.onBegin();
-                }
-                //call JNI interface to execute FFmpeg cmd
-                int result = handle(commands);
-                if (onHandleListener != null) {
-                    onHandleListener.onEnd(result, "");
-                }
-                mProgressListener = null;
+        if (BuildConfig.DEBUG)
+            Log.d(TAG, "executeSync() called with: commands = [" + commands + "]");
+        ThreadPoolUtil.INSTANCE.executeSingleThreadPool(() -> {
+            if (onHandleListener != null) {
+                onHandleListener.onBegin();
             }
+            //call JNI interface to execute FFmpeg cmd
+            int result = handle(commands);
+            if (onHandleListener != null) {
+                onHandleListener.onEnd(result, "");
+            }
+            mProgressListener = null;
         });
     }
 
     public static int executeSync(final String[] commands) {
+        if (BuildConfig.DEBUG)
+            Log.d(TAG, "executeSync() called with: commands = [" + Arrays.toString(commands)+ "]");
         return handle(commands);
     }
 
     /**
      * Execute FFmpeg multi commands
-     * @param commands the String array of command
+     *
+     * @param commands         the String array of command
      * @param onHandleListener the callback for executing command
      */
     public static void execute(final List<String[]> commands, final OnHandleListener onHandleListener) {
+        if (BuildConfig.DEBUG)
+            Log.d(TAG, "execute() called with: commands = [" + Arrays.toString(commands.toArray())+ "]");
         mProgressListener = onHandleListener;
-        ThreadPoolUtil.INSTANCE.executeSingleThreadPool(new Runnable() {
-            @Override
-            public void run() {
-                if (onHandleListener != null) {
-                    onHandleListener.onBegin();
-                }
-                //call JNI interface to execute FFmpeg cmd
-                int result = 0;
-                int count = 0;
-                for (String[] command : commands) {
-                    result = handle(command);
-                    count ++;
-                    Log.i(TAG, count + " result=" + result);
-                }
-                if (onHandleListener != null) {
-                    onHandleListener.onEnd(result, "");
-                }
-                mProgressListener = null;
+        ThreadPoolUtil.INSTANCE.executeSingleThreadPool(() -> {
+            if (onHandleListener != null) {
+                onHandleListener.onBegin();
             }
+            //call JNI interface to execute FFmpeg cmd
+            int result = 0;
+            int count = 0;
+            for (String[] command : commands) {
+                result = handle(command);
+                count++;
+                Log.i(TAG, count + " result=" + result);
+            }
+            if (onHandleListener != null) {
+                onHandleListener.onEnd(result, "");
+            }
+            mProgressListener = null;
         });
     }
 
@@ -122,7 +125,7 @@ public class FFmpegCmd {
     /**
      * execute probe cmd internal
      *
-     * @param commands commands
+     * @param commands         commands
      * @param onHandleListener onHandleListener
      */
     public static void executeProbe(final String[] commands, final OnHandleListener onHandleListener) {

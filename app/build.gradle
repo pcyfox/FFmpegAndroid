@@ -34,12 +34,6 @@ android {
             path "CMakeLists.txt"
         }
     }
-    sourceSets {
-        main {
-            jniLibs.srcDirs = ['libs']
-            jni.srcDirs = []
-        }
-    }
 
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
@@ -48,8 +42,6 @@ android {
 
     packagingOptions {
         exclude 'META-INF/proguard/coroutines.pro'
-        pickFirst 'lib/armeabi-v7a/libmp3lame.so'
-        pickFirst 'lib/arm64-v8a/libmp3lame.so'
     }
 }
 
@@ -63,4 +55,5 @@ dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     //implementation "libmp3" if you need mp3-lite module
     implementation project(':libmp3')
+    implementation 'androidx.annotation:annotation:1.2.0'
 }
