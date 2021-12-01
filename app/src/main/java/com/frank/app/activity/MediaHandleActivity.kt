@@ -1,4 +1,4 @@
-package com.frank.ffmpeg.activity
+package com.frank.app.activity
 
 import android.annotation.SuppressLint
 import android.os.Bundle
@@ -11,7 +11,7 @@ import android.widget.LinearLayout
 import android.widget.TextView
 
 import com.frank.ffmpeg.FFmpegCmd
-import com.frank.ffmpeg.R
+import com.frank.app.R
 import com.frank.ffmpeg.handler.FFmpegHandler
 import com.frank.ffmpeg.util.FFmpegUtil
 import com.frank.ffmpeg.util.FileUtil

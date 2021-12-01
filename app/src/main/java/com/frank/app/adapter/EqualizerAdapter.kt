@@ -1,4 +1,4 @@
-package com.frank.ffmpeg.adapter
+package com.frank.app.adapter
 
 import android.content.Context
 import android.util.Pair
@@ -9,7 +9,7 @@ import android.widget.SeekBar
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-import com.frank.ffmpeg.R
+import com.frank.app.R
 import com.frank.ffmpeg.listener.OnSeeBarListener
 
 import java.util.ArrayList

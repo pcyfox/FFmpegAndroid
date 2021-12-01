@@ -26,6 +26,13 @@ android {
     packagingOptions {
         exclude 'META-INF/proguard/coroutines.pro'
     }
+    externalNativeBuild {
+        cmake {
+            path "CMakeLists.txt"
+            version "3.10.2"
+        }
+    }
+
 }
 
 dependencies {

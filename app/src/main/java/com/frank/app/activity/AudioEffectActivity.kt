@@ -1,4 +1,4 @@
-package com.frank.ffmpeg.activity
+package com.frank.app.activity
 
 import android.Manifest
 import android.media.MediaPlayer
@@ -14,8 +14,8 @@ import android.widget.*
 import androidx.annotation.RequiresApi
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.frank.ffmpeg.R
-import com.frank.ffmpeg.adapter.EqualizerAdapter
+import com.frank.app.R
+import com.frank.app.adapter.EqualizerAdapter
 import com.frank.ffmpeg.format.AudioVisualizer
 import com.frank.ffmpeg.listener.OnSeeBarListener
 import com.frank.ffmpeg.view.VisualizerView

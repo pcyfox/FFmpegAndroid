@@ -1,4 +1,4 @@
-package com.frank.ffmpeg.activity
+package com.frank.app.activity
 
 import android.annotation.SuppressLint
 import android.content.Intent
@@ -12,13 +12,13 @@ import android.view.View
 import android.widget.LinearLayout
 import android.widget.TextView
 import android.widget.Toast
+import com.frank.app.R
 
 import java.io.File
 import java.util.ArrayList
 import java.util.Locale
 
 import com.frank.ffmpeg.AudioPlayer
-import com.frank.ffmpeg.R
 import com.frank.ffmpeg.handler.FFmpegHandler
 import com.frank.ffmpeg.util.FFmpegUtil
 import com.frank.ffmpeg.util.FileUtil

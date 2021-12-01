@@ -1,11 +1,11 @@
-package com.frank.ffmpeg.adapter
+package com.frank.app.adapter
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.frank.ffmpeg.R
+import com.frank.app.R
 import com.frank.ffmpeg.listener.OnItemClickListener
 import java.util.*
 

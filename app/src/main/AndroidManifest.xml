@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.frank.ffmpeg">
+    package="com.frank.app">
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
@@ -25,6 +25,39 @@
         android:theme="@style/AppTheme"
         tools:replace="android:name">
 
+        <activity android:name="com.frank.app.activity.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity> <!-- audio handle -->
+
+        <activity android:name="com.frank.app.activity.AudioHandleActivity" /> <!-- media handle -->
+        <activity android:name="com.frank.app.activity.MediaHandleActivity" /> <!-- video handle -->
+        <activity android:name="com.frank.app.activity.VideoHandleActivity" /> <!-- media player -->
+        <activity
+            android:name="com.frank.app.activity.MediaPlayerActivity"
+            android:screenOrientation="landscape" /> <!-- local pusher -->
+        <activity android:name="com.frank.app.activity.PushActivity" /> <!-- real time pusher -->
+        <activity
+            android:name="com.frank.app.activity.LiveActivity"
+            android:screenOrientation="portrait" /> <!-- filter effect -->
+        <activity
+            android:name="com.frank.app.activity.FilterActivity"
+            android:screenOrientation="landscape" /> <!-- video preview -->
+        <activity
+            android:name="com.frank.app.activity.VideoPreviewActivity"
+            android:screenOrientation="portrait" /> <!-- probe media format -->
+        <activity
+            android:name="com.frank.app.activity.ProbeFormatActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.frank.app.activity.AudioEffectActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.frank.app.activity.AudioPlayActivity" />
+        <activity android:name="com.frank.app.activity.EqualizerActivity" />
     </application>
 
 </manifest>

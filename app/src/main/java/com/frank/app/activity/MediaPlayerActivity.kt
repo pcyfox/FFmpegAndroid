@@ -1,4 +1,4 @@
-package com.frank.ffmpeg.activity
+package com.frank.app.activity
 
 import android.os.Bundle
 import android.util.Log
@@ -8,7 +8,7 @@ import android.view.View
 import android.widget.Button
 
 import com.frank.ffmpeg.MediaPlayer
-import com.frank.ffmpeg.R
+import com.frank.app.R
 import com.frank.ffmpeg.util.FileUtil
 
 /**

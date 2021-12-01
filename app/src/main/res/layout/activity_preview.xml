@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity.VideoPreviewActivity">
+    tools:context="com.frank.app.activity.VideoPreviewActivity">
 
     <SurfaceView
         android:id="@+id/surface_view"
@@ -11,7 +11,7 @@
         android:layout_height="240dp"
         android:layout_centerInParent="true"/>
 
-    <com.frank.ffmpeg.view.VideoPreviewBar
+    <com.frank.app.view.VideoPreviewBar
         android:id="@+id/preview_video"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

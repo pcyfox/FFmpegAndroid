@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity.AudioHandleActivity">
+    tools:context="com.frank.app.activity.AudioHandleActivity">
 
     <LinearLayout
         android:id="@+id/layout_audio_handle"

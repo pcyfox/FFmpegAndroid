@@ -1,4 +1,4 @@
-package com.frank.ffmpeg.activity
+package com.frank.app.activity
 
 import android.os.Bundle
 import android.os.Environment
@@ -10,8 +10,8 @@ import android.widget.RadioGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.frank.ffmpeg.AudioPlayer
-import com.frank.ffmpeg.R
-import com.frank.ffmpeg.adapter.EqualizerAdapter
+import com.frank.app.R
+import com.frank.app.adapter.EqualizerAdapter
 import com.frank.ffmpeg.listener.OnSeeBarListener
 import com.frank.ffmpeg.view.VisualizerView
 import java.lang.StringBuilder

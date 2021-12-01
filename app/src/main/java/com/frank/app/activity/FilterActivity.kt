@@ -1,4 +1,4 @@
-package com.frank.ffmpeg.activity
+package com.frank.app.activity
 
 import android.annotation.SuppressLint
 import android.os.Environment
@@ -17,9 +17,9 @@ import android.widget.Toast
 import android.widget.ToggleButton
 
 import com.frank.ffmpeg.FFmpegApplication
-import com.frank.ffmpeg.R
+import com.frank.app.R
 import com.frank.ffmpeg.VideoPlayer
-import com.frank.ffmpeg.adapter.HorizontalAdapter
+import com.frank.app.adapter.HorizontalAdapter
 import com.frank.ffmpeg.listener.OnItemClickListener
 import com.frank.ffmpeg.util.FileUtil
 

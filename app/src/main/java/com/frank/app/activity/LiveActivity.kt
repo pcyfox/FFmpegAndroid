@@ -1,4 +1,4 @@
-package com.frank.ffmpeg.activity
+package com.frank.app.activity
 
 import android.annotation.SuppressLint
 import android.content.IntentFilter
@@ -15,7 +15,7 @@ import android.widget.CompoundButton
 import android.widget.Toast
 import android.widget.ToggleButton
 
-import com.frank.ffmpeg.R
+import com.frank.app.R
 import com.frank.ffmpeg.handler.ConnectionReceiver
 import com.frank.ffmpeg.listener.OnNetworkChangeListener
 import com.frank.live.camera2.Camera2Helper

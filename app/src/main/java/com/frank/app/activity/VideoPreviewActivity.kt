@@ -1,4 +1,4 @@
-package com.frank.ffmpeg.activity
+package com.frank.app.activity
 
 import android.annotation.SuppressLint
 import android.media.MediaPlayer
@@ -12,8 +12,8 @@ import android.view.SurfaceHolder
 import android.view.SurfaceView
 import android.view.View
 
-import com.frank.ffmpeg.R
-import com.frank.ffmpeg.view.VideoPreviewBar
+import com.frank.app.R
+import com.frank.app.view.VideoPreviewBar
 
 import java.io.IOException
 

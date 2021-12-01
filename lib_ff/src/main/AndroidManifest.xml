@@ -16,39 +16,6 @@
 
     <application>
 
-        <activity android:name="com.frank.ffmpeg.activity.MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <action android:name="android.intent.action.VIEW" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity> <!-- audio handle -->
-
-        <activity android:name="com.frank.ffmpeg.activity.AudioHandleActivity" /> <!-- media handle -->
-        <activity android:name="com.frank.ffmpeg.activity.MediaHandleActivity" /> <!-- video handle -->
-        <activity android:name="com.frank.ffmpeg.activity.VideoHandleActivity" /> <!-- media player -->
-        <activity
-            android:name="com.frank.ffmpeg.activity.MediaPlayerActivity"
-            android:screenOrientation="landscape" /> <!-- local pusher -->
-        <activity android:name="com.frank.ffmpeg.activity.PushActivity" /> <!-- real time pusher -->
-        <activity
-            android:name="com.frank.ffmpeg.activity.LiveActivity"
-            android:screenOrientation="portrait" /> <!-- filter effect -->
-        <activity
-            android:name="com.frank.ffmpeg.activity.FilterActivity"
-            android:screenOrientation="landscape" /> <!-- video preview -->
-        <activity
-            android:name="com.frank.ffmpeg.activity.VideoPreviewActivity"
-            android:screenOrientation="portrait" /> <!-- probe media format -->
-        <activity
-            android:name="com.frank.ffmpeg.activity.ProbeFormatActivity"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name="com.frank.ffmpeg.activity.AudioEffectActivity"
-            android:screenOrientation="portrait" />
-        <activity android:name="com.frank.ffmpeg.activity.AudioPlayActivity" />
-        <activity android:name="com.frank.ffmpeg.activity.EqualizerActivity" />
     </application>
 
 </manifest>

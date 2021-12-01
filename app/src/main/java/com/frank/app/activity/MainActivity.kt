@@ -1,4 +1,4 @@
-package com.frank.ffmpeg.activity
+package com.frank.app.activity
 
 import android.content.Intent
 import android.os.Bundle
@@ -6,8 +6,8 @@ import android.view.View
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
 
-import com.frank.ffmpeg.R
-import com.frank.ffmpeg.adapter.WaterfallAdapter
+import com.frank.app.R
+import com.frank.app.adapter.WaterfallAdapter
 import com.frank.ffmpeg.listener.OnItemClickListener
 
 /**

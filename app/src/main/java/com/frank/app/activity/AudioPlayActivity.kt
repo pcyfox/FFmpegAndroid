@@ -1,4 +1,4 @@
-package com.frank.ffmpeg.activity
+package com.frank.app.activity
 
 import android.annotation.SuppressLint
 import android.media.MediaPlayer
@@ -11,7 +11,7 @@ import android.util.Log
 import android.widget.ImageView
 import android.widget.SeekBar
 import android.widget.TextView
-import com.frank.ffmpeg.R
+import com.frank.app.R
 import com.frank.ffmpeg.handler.FFmpegHandler
 import com.frank.ffmpeg.handler.FFmpegHandler.MSG_FINISH
 import com.frank.ffmpeg.listener.OnLrcListener

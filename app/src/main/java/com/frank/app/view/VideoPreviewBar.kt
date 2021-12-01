@@ -1,4 +1,4 @@
-package com.frank.ffmpeg.view
+package com.frank.app.view
 
 import android.content.Context
 import android.graphics.SurfaceTexture
@@ -9,8 +9,8 @@ import android.view.*
 import android.widget.RelativeLayout
 import android.widget.SeekBar
 import android.widget.TextView
+import com.frank.app.R
 
-import com.frank.ffmpeg.R
 import com.frank.ffmpeg.hardware.HardwareDecode
 import com.frank.ffmpeg.util.ScreenUtil
 import com.frank.ffmpeg.util.TimeUtil

@@ -1,4 +1,4 @@
-package com.frank.ffmpeg.activity
+package com.frank.app.activity
 
 import android.os.Bundle
 import android.text.TextUtils
@@ -7,7 +7,7 @@ import android.view.View
 import android.widget.EditText
 
 import com.frank.ffmpeg.Pusher
-import com.frank.ffmpeg.R
+import com.frank.app.R
 
 import java.io.File
 
